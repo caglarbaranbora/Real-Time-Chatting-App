@@ -52,8 +52,8 @@ export default function ChatItem({ item, index, noBorder, currentUser }) {
     if (typeof lastMessage == "undefined") return "Loading...";
     if (lastMessage) {
       if (currentUser?.userId == lastMessage?.userId)
-        return "You: " + lastMessage?.text;
-      return `${currentUser?.username}:` + lastMessage?.text;
+        return "You : " + lastMessage?.text;
+      return `${item?.username}: ` + lastMessage?.text;
     } else {
       return "Say Hi 👋";
     }

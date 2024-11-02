@@ -1,11 +1,5 @@
-import {
-  View,
-  Text,
-  Pressable,
-  StatusBar,
-  ActivityIndicator,
-} from "react-native";
-import React, { useEffect, useRef, useState } from "react";
+import { View, StatusBar } from "react-native";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "@/context/authContext";
 import {
   widthPercentageToDP as wp,
@@ -17,7 +11,7 @@ import { getDocs, query, where } from "firebase/firestore";
 import { usersRef } from "@/firebaseConfig";
 
 const Home = () => {
-  const { logout, user } = useAuth();
+  const { user } = useAuth();
   const [users, setUsers] = useState([]);
 
   useEffect(() => {

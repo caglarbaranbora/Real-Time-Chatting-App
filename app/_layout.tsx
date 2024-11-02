@@ -22,7 +22,7 @@ const MainLayout = () => {
   return <Slot />;
 };
 
-export default function RootLayout() {
+const RootLayout = () => {
   return (
     <MenuProvider>
       <AuthContextProvider>
@@ -30,4 +30,6 @@ export default function RootLayout() {
       </AuthContextProvider>
     </MenuProvider>
   );
-}
+};
+
+export default RootLayout;
